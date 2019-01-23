@@ -1,0 +1,64 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+es:
+  devise:
+    confirmations:
+      confirmed: "Tu email ha sido confirmado correctamente"
+      send_instructions: "Recibirás un email con las instruccciones de confirmación"
+      send_paranoid_instructions: "Si tu email está registrado recibirás un correo con las instrucciones de confirmación"
+    failure:
+      already_authenticated: "Ya has iniciado sesión"
+      inactive: "La cuenta aún no ha sido activada"
+      invalid: "%{authentication_keys} o contraseña incorrectos"
+      locked: "La cuenta ha sido bloqueada"
+      last_attempt: "Sólo queda un intento para bloquear la cuenta"
+      not_found_in_database: "%{authentication_keys} o contraseña incorrectos"
+      timeout: "La sesión ha caducado. Por favor, inicia sesión de nuevo"
+      unauthenticated: "Necesitas iniciar sesión o registrarte para continuar"
+      unconfirmed: "Necesitas confirmar tu dirección de email para continuar"
+    mailer:
+      confirmation_instructions:
+        subject: "Instrucciones de confirmación"
+      reset_password_instructions:
+        subject: "Intrucciones de restauración de contraseña"
+      unlock_instructions:
+        subject: "Instrucciones de desbloqueo de cuenta"
+      email_changed:
+        subject: "Email cambiado"
+      password_change:
+        subject: "Contraseña cambiada"
+    omniauth_callbacks:
+      failure: "No se ha podido identificar a %{kind} debido a \"%{reason}\""
+      success: "Autenticado correctamente %{kind}"
+    passwords:
+      no_token: "No puedes acceder a este apartado sin haber confirmado tu contraseña. Si vienes de confirmar tu contraseña asegurate de estar utilizando la URL del email completa"
+      send_instructions: "Recibirás instrucciones para cambiar tu contraseña en unos minutos"
+      send_paranoid_instructions: "Si tu email está registrado, recibirás un link de recuperación en tu dirección de email en unos minutos"
+      updated: "Tu contraseña ha sido modificada correctamente. Ahora puedes volver a iniciar sesión"
+      updated_not_active: "La contraseña ha sido modificada correctamente"
+    registrations:
+      destroyed: "Tu cuenta ha sido eliminada correctamente. ¡Esperamos volver a verte pronto!"
+      signed_up: "¡Bienvenido! Te has registrado correctamente"
+      signed_up_but_inactive: "Te has registrado correctamente. Sin embargo, no puedes acceder a tu cuenta hasta que no esté activada"
+      signed_up_but_locked: "Te has registrado correctamente. Sin embargo, no puedes acceder a tu cuenta porque ha sido bloqueada"
+      signed_up_but_unconfirmed: "Se ha enviado un correo a tu email con un link de confirmación. Por favor, sigue las instrucciones para activar tu cuenta"
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+      already_signed_out: "Signed out successfully."
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

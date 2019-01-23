@@ -1,0 +1,16 @@
+<nav class="navbar navbar-dark bg-dark">
+	<a class="navbar-brand nav-title tex font-weight-bold" href="/">Platzi Blog!</a>
+  	<form class="form-inline">
+	    <div style="padding-left: 10px;">
+	    	<% if not user_signed_in? %>
+		    	<%= link_to "Registrar", new_user_registration_path, class: "btn btn-outline-primary" %>
+	    		<%= link_to "Iniciar Sesión", new_user_session_path, class: "btn btn-outline-success" %>
+	    	<% else %>
+	    		<span class="text-white pr-3">
+	    			<%= current_user.email %>
+	    		</span>
+	    		<%= link_to "Cerrar Sesión", destroy_user_session_path, class: "btn btn-outline-success", method: :delete %>
+	    	<% end %>
+	    </div>
+  	</form>
+</nav>
