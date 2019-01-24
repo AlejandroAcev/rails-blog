@@ -26,9 +26,6 @@
 	  ]
 	]
 
-	article_list.each do |title, body, user_id|
-		Article.create(title: title, body: body, user_id: user_id)
-	end
 
 	
 
