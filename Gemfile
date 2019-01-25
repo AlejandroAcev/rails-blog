@@ -52,5 +52,6 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'jquery-rails'
 gem 'devise'
 gem 'devise-i18n'
-gem 'ckeditor'
+gem 'ckeditor', '4.1.3'
 gem 'paperclip'
+gem "font-awesome-rails"

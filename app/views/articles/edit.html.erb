@@ -1,2 +1,10 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<span class="position-absolute back-button"><%= link_to '<i class="fas fa-angle-left"></i> Volver'.html_safe, articles_path %></span>
+
+<h1 class="article-title">Editar Artículo</h1>
+
+<div class="content">
+
+	<%= render "form", article: @article %>
+
+</div>
+

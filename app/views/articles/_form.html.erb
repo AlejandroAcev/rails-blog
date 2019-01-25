@@ -1,0 +1,44 @@
+<div class="row">
+	
+	<div class="col-1"></div>
+	
+	<div class="col-10">
+
+		<div class="row">
+
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<%= form_with(model: article, local: true) do |field| %>
+
+					<div class="form-group">
+						<%= field.label :title, "Título:" %>
+						<%= field.text_field :title, class: "form-control" %>
+					</div>
+
+					<div class="form-group">
+						<%= field.label :body, "Contenido:" %>
+						<%= field.cktext_area :body, class: "form-control" %>
+					</div>
+					
+					<% if user_signed_in? %>
+						<%= field.hidden_field :user_id, value: current_user.id %>
+					<% else %>
+						<%= field.hidden_field :user_id, value: "1" %>
+					<% end %>
+
+					<div class="actions">
+						<%= field.submit "Publicar", class: "btn btn-primary" %>
+					</div>
+
+				<% end %>
+
+			</div>
+
+		</div>
+			
+	</div>
+
+	<div class="col-1"></div>
+
+</div>
+

@@ -1,34 +1,46 @@
-<h1>Articles#show</h1>
+<span class="position-absolute back-button"><%= link_to '<i class="fas fa-angle-left"></i> Volver'.html_safe, articles_path %></span>
 
+<h1 class="article-title"><%= @article.title %></h1>
 
-<div class="row">
-	<div class="col-12">
-		<div class="">
-			<div class="container">
-				<div class="row">
-					<% if user_signed_in? %>
-						<div class="col-12 text-right mt-auto">
-							<%= link_to '<i class="fas fa-prencil-alt"></i>'.html_safe, edit_article_path(@article) %>
-							<%= link_to @article, method: :delete, data: { confirm: "¿Estás seguro de que desea eliminar este articulo?" } do %>
-								<i class="fas fa-trash-alt"></i>
-							<% end %>
-						</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
+<div class="content">
+
 	<div class="row">
+	
+		<div class="col-1"></div>
+		
+		<div class="col-10">
 
-		<div class="col-lg-3 col-md-8 mx-auto">
-			<i><b>Autor:</b> <%= current_user.email %></i>
+			<div class="row">
+
+				<% if user_signed_in? %>
+					<div class="col-12 text-right mt-auto bar-option">
+						<%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_article_path(@article) %>
+						<span>&nbsp;</span>
+						<%= link_to @article, method: :delete, data: { confirm: "¿Estás seguro de que desea eliminar este articulo?" } do %>
+							<i class="fas fa-trash-alt"></i>
+						<% end %>
+					</div>
+				<% end %>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-lg-3 col-md-8 mx-auto article-author">
+					<i><b>Autor:</b> <%= @article.user.name %></i>
+				</div>
+
+				<div class="col-lg-9 col-md-10 mx-auto article-box">
+					<p><%= (raw @article.body) %></p>
+				</div>
+
+			</div>
+				
 		</div>
 
-		<div class="col-lg-9 col-md-10 mx-auto">
-			<p><%= (raw @article.body) %></p>
-		</div>
+		<div class="col-1"></div>
 
 	</div>
+
 </div>
+

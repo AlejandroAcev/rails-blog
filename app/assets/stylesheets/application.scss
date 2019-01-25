@@ -11,7 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
+
+
 @import "bootstrap";
+@import "font-awesome";
 
 .body-padding{
 	padding: 0 25px 0 25px;
@@ -19,4 +23,37 @@
 
 .navbar-dark .navbar-brand{
 	color: #90C83C !important;
+}
+
+.card-title a{
+	padding: 50px 0 0 15px;
+	color: black !important;
+}
+
+.back-button{
+	margin-top: -30px !important;
+	color: gray;
+} 
+
+.bar-option{
+	background-color: #e5e5e5;
+	border-radius: 10px 10px 0 0;
+}
+
+.article-box{
+	border-radius: 0 0 10px 0;
+	padding: 25px 25px 25px 25px;
+	border-right: 2px solid #F9F9F9;
+	border-bottom: 2px solid #F9F9F9;
+}
+
+.article-author{
+	background-color: #F9F9F9;
+	padding: 25px 25px 25px 25px;
+	border-radius: 0 0 0 10px;
+	vertical-align: baseline;
+}
+
+.article-title{
+	padding: 25px 0 25px 15px;
 }
